@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 한문철 AI - 교통사고 영상 분석 플랫폼
 
-## Getting Started
+교통사고 영상을 AI가 분석하여 과실비율, 분석이유, 관련 판례를 제공하는 분쟁심의 지원 플랫폼입니다. Next.js 앱 라우터와 FSD(Feature-Sliced Design) 아키텍처를 사용하여 개발되었습니다.
 
-First, run the development server:
+## 🚀 기술 스택
+
+- **Frontend**: Next.js 14 (App Router), React 18, TypeScript
+- **Styling**: Tailwind CSS
+- **Architecture**: Feature-Sliced Design (FSD)
+- **Linting**: ESLint
+
+## 📁 프로젝트 구조 (FSD)
+
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── globals.css
+├── pages/                  # 페이지 레이어
+│   └── home/
+├── widgets/                # 위젯 레이어
+│   ├── header/
+│   └── footer/
+├── features/               # 기능 레이어
+│   └── auth/
+├── entities/               # 엔티티 레이어
+│   └── user/
+└── shared/                 # 공유 레이어
+    ├── ui/                  # 공통 UI 컴포넌트
+    ├── lib/                 # 유틸리티 함수
+    ├── api/                 # API 클라이언트
+    └── config/              # 설정 파일
+```
+
+## 🛠️ 개발 환경 설정
+
+### 1. 의존성 설치
+
+```bash
+npm install
+```
+
+### 2. 개발 서버 실행
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+브라우저에서 [http://localhost:3000](http://localhost:3000)을 열어 확인하세요.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. 빌드
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+## 📋 주요 기능
 
-To learn more about Next.js, take a look at the following resources:
+- 🎥 **교통사고 영상 분석**: AI가 영상을 분석하여 사고 상황을 정확히 파악
+- ⚖️ **과실비율 산정**: 객관적이고 정확한 과실비율을 AI가 계산
+- 📝 **상세 분석 보고서**: 분석이유와 근거를 명확히 제시
+- 📚 **관련 판례 제공**: 유사한 사고 사례와 법적 근거 제공
+- 🤝 **분쟁심의 지원**: 보험사와의 분쟁심의 과정 지원
+- ⚖️ **법률 서비스 연계**: 변호사 연결 및 재판 지원 서비스
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎯 서비스 특징
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### AI 영상 분석 기술
 
-## Deploy on Vercel
+- **컴퓨터 비전**: 차량, 보행자, 도로 상황을 정확히 인식
+- **사고 시점 분석**: 정확한 사고 발생 순간과 원인 파악
+- **교통법규 적용**: 도로교통법에 따른 과실 기준 적용
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 법적 근거 제공
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **판례 데이터베이스**: 수만 건의 교통사고 판례 분석
+- **과실비율 기준**: 대법원 및 각급 법원의 판결 기준 적용
+- **보험약관 연계**: 보험사별 약관과 연계한 분석
+
+### 사용자 편의성
+
+- **간편한 영상 업로드**: 드래그 앤 드롭으로 쉬운 영상 업로드
+- **실시간 분석**: 빠른 AI 분석 결과 제공
+- **상세한 보고서**: PDF 형태의 상세 분석 보고서 다운로드
+
+## 🏗️ 아키텍처 설명
+
+### FSD (Feature-Sliced Design) 레이어
+
+1. **app**: Next.js 앱 라우터 설정
+2. **pages**: 페이지 컴포넌트 (라우트별 페이지)
+3. **widgets**: 독립적인 UI 블록 (헤더, 푸터 등)
+4. **features**: 비즈니스 기능 (인증, 학습 등)
+5. **entities**: 비즈니스 엔티티 (사용자, 게시물 등)
+6. **shared**: 공통 코드 (UI, 유틸리티, 설정)
+
+### 레이어 간 의존성 규칙
+
+- 상위 레이어는 하위 레이어를 import할 수 있음
+- 하위 레이어는 상위 레이어를 import할 수 없음
+- 같은 레이어 내에서는 서로 import 가능
+
+## 🚀 배포
+
+Vercel을 통한 배포를 권장합니다:
+
+```bash
+npm run build
+```
+
+## 📝 라이선스

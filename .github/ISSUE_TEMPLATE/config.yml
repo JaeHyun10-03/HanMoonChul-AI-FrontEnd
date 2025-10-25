@@ -1,0 +1,17 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📚 문서
+    url: https://github.com/your-username/hanmoonchul-ai/wiki
+    about: 프로젝트 문서와 가이드를 확인하세요
+  - name: 💬 토론
+    url: https://github.com/your-username/hanmoonchul-ai/discussions
+    about: 일반적인 질문이나 아이디어를 공유하세요
+  - name: 🐛 버그 리포트
+    url: https://github.com/your-username/hanmoonchul-ai/issues/new?template=bug_report.md
+    about: 버그를 발견하셨나요? 버그 리포트를 작성해주세요
+  - name: ✨ 기능 요청
+    url: https://github.com/your-username/hanmoonchul-ai/issues/new?template=feature_request.md
+    about: 새로운 기능을 제안하세요
+  - name: 🤖 AI 분석 이슈
+    url: https://github.com/your-username/hanmoonchul-ai/issues/new?template=ai_analysis_issue.md
+    about: AI 영상 분석과 관련된 이슈를 보고하세요
