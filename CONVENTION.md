@@ -61,8 +61,16 @@ npm run lint
 
 - 함수형 컴포넌트 사용
 - Props 인터페이스는 컴포넌트명 + Props
-- 컴포넌트명은 `PascalCase` 사용
-- 파일명은 `kebab-case` 사용
+
+#### 파일명 및 컴포넌트명 규칙
+
+| 유형     | 파일명 규칙             | 예시                              |
+| -------- | ----------------------- | --------------------------------- |
+| 컴포넌트 | `PascalCase.tsx`        | `AuthPage.tsx`, `UserProfile.tsx` |
+| Hook     | `use + PascalCase.ts`   | `useMediaQuery.ts`, `useAuth.ts`  |
+| Store    | `kebab-case + store.ts` | `auth-store.ts`, `user-store.ts`  |
+| API      | `kebab-case + api.ts`   | `auth-api.ts`, `user-api.ts`      |
+| Utils    | `kebab-case.ts`         | `format-date.ts`, `validation.ts` |
 
 ### CSS/Tailwind 규칙
 
