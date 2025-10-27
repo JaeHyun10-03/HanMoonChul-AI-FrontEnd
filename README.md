@@ -4,7 +4,7 @@
 
 ## 🚀 기술 스택
 
-- **Frontend**: Next.js 14 (App Router), React 18, TypeScript
+- **Frontend**: Next.js 16 (App Router), React 19, TypeScript
 - **Styling**: Tailwind CSS
 - **Architecture**: Feature-Sliced Design (FSD)
 - **Linting**: ESLint
@@ -127,4 +127,4 @@ npm run build
 ♻️ : 영상 분석 로직 모듈화
 ```
 
-자세한 내용은 [커밋 컨벤션 가이드](./COMMIT_CONVENTION.md)와 [기여 가이드](./CONTRIBUTING.md)를 참고해주세요.
+자세한 내용은 [개발 컨벤션](./CONVENTION.md)을 참고해주세요.
